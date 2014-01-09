@@ -39,3 +39,7 @@ compile group:'org.jpos.ee', name:'jposee-server-simulator', version:'2.0.2-SNAP
  启动后，同样地，你可以可以参见这个目录：build/install/serversimulator，直接执行bin/q2 (或者是bin\q2.bat如果在windows上的hauler)也可启动server.
  下一步，重复上面步骤，重新下载jPOS-template命名为clientsimulator,之后将server换成client即可。
 </pre>
+
+
+作者：[@岁月静好--似水流年](http://weibo.com/u/1747720793)<br/>
+2014-01-09 星期四 18:09:37 
