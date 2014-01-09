@@ -25,7 +25,7 @@ jPOS资源大放送
 1. [jPOS-project-guide.pdf](http://jpos.org/doc/jPOS-Project-Guide.pdf)
 1. [jPOS-Common-Mssage-Format.pdf](http://jpos.org/doc/jPOS-CMF.pdf)
 1. [jPOS-Extended-Edition.pdf](http://jpos.org/doc/jPOS-EE.pdf)
-2. 
+
 ## 网页参考 ##
 1. [https://github.com/jpos](https://github.com/jpos)
 1. [http://jpos.org/learn](http://jpos.org/learn)
