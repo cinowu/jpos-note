@@ -40,6 +40,43 @@ compile group:'org.jpos.ee', name:'jposee-server-simulator', version:'2.0.2-SNAP
  下一步，重复上面步骤，重新下载jPOS-template命名为clientsimulator,之后将server换成client即可。
 </pre>
 
+## BTW:关于端口修改 ##
+
+###服务器端文件###
+serversimulator\build\install\serversimulator\deploy\05_serversimulator.xml
+##
+	<server class="org.jpos.q2.iso.QServer" logger="Q2"
+	  name="simulator_10000">
+	 <attr name="port" type="java.lang.Integer">10000</attr>
+	 <channel class="org.jpos.iso.channel.XMLChannel"
+	        logger="Q2" packager="org.jpos.iso.packager.XMLPackager">
+	 </channel>
+	 <request-listener class="org.jpos.bsh.BSHRequestListener" logger="Q2">
+	  <property name="source" value="cfg/serversimulator.bsh" />
+	 </request-listener>
+	</server>
+
+###客服端文件###
+clientsimulator\build\install\clientsimulator\deploy\10_clientsimulator_channel.xml
+##
+	<channel-adaptor name='clientsimulator-adaptor'
+	    class="org.jpos.q2.iso.ChannelAdaptor" logger="Q2">
+	 <channel class="org.jpos.iso.channel.XMLChannel" logger="Q2"
+	       packager="org.jpos.iso.packager.XMLPackager">
+	
+	  <property name="host" value="127.0.0.1" />
+	  <property name="port" value="10000" />
+	 </channel>
+	 <in>clientsimulator-send</in>
+	 <out>clientsimulator-receive</out>
+	 <reconnect-delay>10000</reconnect-delay>
+	</channel-adaptor>
+
+以上两个文件都有port属性，可以根据需要进行修改
+
+
+	     
+
 
 作者：[@岁月静好--似水流年](http://weibo.com/u/1747720793)<br/>
-2014-01-09 星期四 18:09:37 
+2014-01-10 星期五 15:44:12 
