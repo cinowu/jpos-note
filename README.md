@@ -11,6 +11,7 @@ jPOS资源大放送
 3.maven知识
 4.git知识
 5.groovy知识
+6.BeanShell知识
 </pre>
 
 #资料#
