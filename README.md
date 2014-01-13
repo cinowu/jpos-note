@@ -12,6 +12,7 @@ jPOS资源大放送
 4.git知识
 5.groovy知识
 6.BeanShell知识
+7.pgp知识
 </pre>
 
 #资料#
