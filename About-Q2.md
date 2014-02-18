@@ -35,7 +35,7 @@ ResourceBundle QFactory.properties文件为很多我们熟知的QBeans提供了�
 	channel-adaptor=org.jpos.q2.iso.ChannelAdaptor
 ```
 像下面这样使用
-```script
+```javascript
 <script name="myscript">
 ...
 ...
