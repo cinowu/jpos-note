@@ -51,15 +51,18 @@ shutdown这个配置的简称非常有用，就一行元素会使得Q2停止一�
 
 
 ##Q2生命周期
-Q2 为QBean生命周期提供了四个简单的方法如下：
-init
-start
-stop
-destroy
+
+Q2 为QBean生命周期提供了四个简单的方法如下：  
+
+- init
+- start
+- stop
+- destroy
 
 ##QBean的另外两个方法
-int getState(); String
-getStateAsString(); 
+- int getState(); 
+- String getStateAsString();   
+
 methods required for housekeeping and JMX-based monitoring.
 这两个方法适合用在家务管理和基于JMX的监控系统上
 
