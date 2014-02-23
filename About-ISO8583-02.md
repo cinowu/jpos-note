@@ -288,7 +288,8 @@ http://jpos.org/doc/javadoc/org/jpos/iso/ISOChannel.html
 
 ###3）message flow (e.g., send request for authorization, wait for response, retransmit, reversal)消息流
 
-####3.1）认证的例子
+####3.1）认证的例子  
+
 <pre>
     Time        Acquirer        Issuer      Description
     t0          0100 -->                    authorization request
@@ -297,7 +298,8 @@ http://jpos.org/doc/javadoc/org/jpos/iso/ISOChannel.html
     你不得不通过一些途径终止这个请求，恢复之前的交易信息然后重新尝试发一次验证请求.
 </pre>
     
-####3.2) 认证超时
+####3.2) 认证超时  
+
 <pre>
     Time        Acquirer        Issuer      Description
     t0          0100 -->                    authorization request
@@ -314,7 +316,8 @@ http://jpos.org/doc/javadoc/org/jpos/iso/ISOChannel.html
       下面有一个例子可以帮助你看到验证请求和响应期间到底交换了哪些数据。
 </pre>
      
-####3.3)
+####3.3)  
+
 <pre>
          认证请求的例子数据    ：
     Fld #       Description                 Value                   Comments
@@ -356,7 +359,6 @@ http://jpos.org/doc/javadoc/org/jpos/iso/ISOChannel.html
 
 
     以上响应多出了Field#38 交易授权机构返回的返回代码
-
 </pre>
 
 
@@ -385,7 +387,8 @@ ISOMsg, ISOField, ISOBitMapField, ISOBinaryField和一些自定义的域类型�
     }
 ```
 这些方法正好与ISO-8583 Message结构吻合。
-  
+
+
 <pre>
 There are many situations where some methods are not applicable (i.e., getChildren() has no
 meaning in a leaf field, same goes for methods such as getMaxField()), but as a general rule,
@@ -398,7 +401,8 @@ easily assign an ISOMsg as a field of an outer ISOMsg.
 
 
 
-###1） ISOComponent,ISOMsg, ISOField,ISOBinaryField的关系
+###1） ISOComponent,ISOMsg, ISOField,ISOBinaryField的关系  
+
 <pre>
     1.1）ISOMsg, ISOField,ISOBinaryField都实现自ISOComponent接口
     1.2）一个ISOMsg拥有多个ISOField和多个ISOBinaryField
@@ -528,7 +532,8 @@ packager.pack(ISOComponent)也同样代表消息的压缩/加压操作。
      
 > [注]jPOS定义了很多ISOFieldPackager的实现类，其实你没必须要自己再去写一个实现。
 > 
-> ISOFieldPackagers通常在org.jpos.iso包下，如果你要自定义自己的ISOFieldPackager类，你的类也一样应该有如下结构：
+> ISOFieldPackagers通常在org.jpos.iso包下，如果你要自定义自己的ISOFieldPackager类，你的类也一样应该有如下结构：  
+> 
 <pre>
      Name                   Purpose
     IF_CHAR             Fixed length alphanumeric (ASCII)
@@ -672,7 +677,8 @@ ISOChannel继承自ISOSource接口类如下：
 不同的交换信息采用不同的数据包协议。jPOS通过完全独立的ISOChannels实现类来封装它的功能。
 它拥有很多实现，因此你可以很容易写你自己的，也许用BaseChannel作为超类或更加有益处。
    
-ISOChannel接口实现类的例子如下：
+ISOChannel接口实现类的例子如下：  
+
 <pre>
    	Name 							Description
 	ASCIIChannel 					4 bytes message length plus ISO-8583 data
@@ -682,7 +688,8 @@ ISOChannel接口实现类的例子如下：
 									Very useful for testing purposes.
 	PADChannel 						Used to connect to X.25 packet assembler/dissamblers
 	XMLChannel						jPOS Internal XML representation for ISO-8583 messages
-</pre>
+</pre>  
+
 注：查看org.jpos.iso.channel.\* 可以获得完整实现列表  
  
 在所有的ISOChannel实现类之中，PADChannel这个类应该尤其被注意。大多数基于ISO-8583数据协议的
@@ -948,6 +955,7 @@ server.addISORequestListener (newTest ());
 	  </send>
 	</log>
 ```
+
 
 <pre>
    
