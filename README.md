@@ -17,6 +17,7 @@ jPOS资源大放送
 
 #资料#
 ## 资源包 ##
+1. [JAR包](http://jpos.org/maven/org/jpos/jpos/)
 1. [压缩包](https://github.com/jpos/jPOS/tags)
 1. [jPOS-master.zip](https://github.com/jpos/jPOS/archive/master.zip)
 1. [jPOS-EE-master.zip](https://github.com/jpos/jPOS-EE/archive/master.zip)
